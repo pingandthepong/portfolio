@@ -1,0 +1,334 @@
+/* .visual */
+.visual {
+  width: 100%;
+  height: 200px;
+  background: url("../images/sub2_visual.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.visual span {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+
+/* .sub_nav (.swiper1) */
+.sub_nav.swiper-container.swiper1 {
+  width: 100%;
+  background: #fff;
+}
+.sub_nav li.swiper-slide {
+  text-align: center;
+  position: relative;
+}
+.sub_nav li a {
+  font-size: 1rem;
+  color: #666;
+  line-height: 55px;
+  &.current {
+    color: #f65742;
+    font-weight: 500;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #f65742;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+  &.current::after {
+    opacity: 1;
+  }
+}
+
+
+
+
+/* #content */
+#content {
+  width: 100%;
+  margin: 0 auto;
+  .more_btn {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #2C44F2;
+    color: #2C44F2;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 0;
+    font-size: 1rem;
+    transition: all .25s ease-out;
+    &:active {
+      background: #2C44F2;
+      color: #fff;
+    }
+  }
+}
+#content section {
+  padding: 0;
+}
+
+/* .intro */
+@keyframes slideup {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#content .content_area .intro {
+  width: 100%;
+  position: relative;
+  img {
+    width: 100%;
+    filter: brightness(.6);
+  }
+  .intro__title_container {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 4px 10px rgba(0,0,0,.7);
+  }
+  .intro__title {
+    text-align: center;
+    color: #fff;
+    .business {
+      display: block;
+      margin-bottom: 2.5%;
+      animation: slideup .75s ease-out;
+    }
+    h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10%;
+      animation: slideup .75s ease-out;
+      animation-delay: .25s;
+    }
+    .slogan {
+      font-size: 1.1rem;
+      font-weight: 200;
+      line-height: 1.5;
+      letter-spacing: -0.085rem;
+      margin-bottom: 30px;
+      animation: slideup .75s ease-out;
+      animation-delay: .5s;
+      span {
+        display: block;
+        margin-bottom: 5%;
+      }
+    }
+    .sector {
+      animation: slideup .75s ease-out;
+      animation-delay: .75s;
+      &::before {
+        content: '';
+        display: block;
+        width: 25%;
+        height: 1px;
+        background: rgba(255,255,255,.7);
+        margin: 0 auto 30px;
+      }
+    }
+  }
+}
+
+/* .intro2 */
+#content .content_area .intro2 {
+  width: 100%;
+  padding: 10% 0 0;
+
+  .intro2__title {
+    width: 100%;
+    .more_btn {
+      width: auto;
+      position: absolute;
+      left: 10%;
+      bottom: -20%;
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      position: relative;
+      .accent {
+        display: block;
+        font-size: 2.3rem;
+        font-weight: 700;
+        letter-spacing: -.1rem;
+
+        .before_circle {
+          position: relative;
+        }
+        .before_circle::before {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #f65742;
+          position: absolute;
+          left: -30%;
+          top: 0;
+          z-index: -10;
+        }
+        /* TODO: 스크롤 방향에 따라 addClass('on') */
+        .before_circle.on::before {
+          transform: scale(5);
+        }
+      }
+    }
+  }
+
+  .swiper-container.swiper2 {
+    width: 100%;
+  }
+  .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+
+    dt {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    dd {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .img {
+      width: 100%;
+      border-radius: 30px 30px 0 0;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+/* .intro3 */
+#content .content_area .intro3 {
+  padding: 20% 0;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.5);
+  }
+
+  .intro3_wrap {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+
+    .intro3_txt {
+      padding: 5% 0 10%;
+      
+      h3 {
+        font-size: 1.6rem;
+        line-height: 1.75;
+        margin-bottom: 30px;
+        letter-spacing: -.1rem;
+        color: #fff;
+        position: relative;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 50px;
+          background: rgba(255,255,255,.9);
+          margin: 30px auto;
+        }
+      }
+
+    
+      p {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        text-align: justify;
+        line-height: 1.75;
+        margin-bottom: 10%;
+      }
+    
+      .more_btn {
+        width: 60%;
+        margin: 0 auto;
+        padding: 12px 28px;
+        letter-spacing: -0.09rem;
+      }
+  }
+  }
+
+  .swiper3 {
+    width: 100%;
+    padding: 10% 0;
+  
+    .swiper-slide {
+      width: 100%;
+      text-align: center;
+  
+      .img_container {
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #d9d9d9;
+  
+        img {
+          width: 100%;
+          height: 240px;
+          object-fit: cover;
+        }
+      }
+  
+      dl {
+        font-size: 1.25rem;
+        text-shadow: 1px 1px 3px rgba(0,0,0,.6);
+        display: flex;
+        flex-direction: column-reverse;
+        
+        dt {
+          font-weight: 700;
+        }
+        dd {
+          font-weight: 300;
+          margin: 20px 0 10px;
+        }
+      }
+      
+    }
+  }
+}

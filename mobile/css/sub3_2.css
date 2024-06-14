@@ -1,0 +1,134 @@
+/* .sub_nav */
+.sub_nav {
+  width: 100%;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+/* #content */
+#content {
+  width: 100%;
+  margin: 0 auto;
+}
+#content section {
+  padding: 75px 0;
+}
+
+#content .content_area .award {
+  width: 100%;
+  background: #f8f8f8;
+
+  .award__container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #2C44F2;
+      margin-bottom: 10%;
+  
+      + p {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 30px;
+
+        strong {
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .search {
+      background: #fff;
+      border: 1px solid #f2f2f5;
+      border-radius: 30px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 10%;
+      padding: 0 6% 0 8%;
+      box-sizing: border-box;
+      box-shadow: -5px -5px 15px #fff, 0 0 5px 0 rgba(0,0,0,.3);
+
+      input {
+        width: 100%;
+        border: none;
+        font-size: 1.04rem;
+        padding: 8px 0;
+        background: none;
+
+        &::placeholder {
+          color: #999;
+          font-size: 1rem;
+          font-weight: 300;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+      #searchBtn {
+        font-size: 1.2rem;
+        color: #2C44F2;
+        background: none;
+        border: none;
+      }
+    }
+  }
+}
+
+/* .award_list */
+#content .award__contents {
+  margin: 50px auto;
+}
+#content .award__contents .award_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+#content .award__container .award_list li {
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+#content .award__container .img_wrap {
+  width: 100%;
+  aspect-ratio: 507 / 215;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+#content .award__container .award_txt {
+  width: 90%;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  
+}
+#content .award__container .award_txt dt {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  order: 1;
+}
+#content .award__container .award_txt .award_institution {
+  font-size: 1.01rem;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 7px;
+  order: 0;
+}
+#content .award__container .award_txt .date {
+  font-size: 1rem;
+  font-weight: 200;
+  color: #999;
+  order: 2;
+}

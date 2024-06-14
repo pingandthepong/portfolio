@@ -1,0 +1,501 @@
+:root {
+  --album1: #323b8b;
+  --album2: #9d2334;
+  --album3: #fff;
+}
+
+#menu {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  font-family: var(--contentFont);
+  color: #fff;
+  z-index: 100;
+
+  & li {
+    transform: translateX(-100%);
+
+    &.ani {
+      animation: menuAni 0.5s ease-out forwards;
+    }
+
+    &:first-of-type {
+      border-top: 1px solid #fff;
+    }
+
+    &:hover a,
+    &.on a {
+      background: var(--main);
+      font-weight: 500;
+      border-radius: 0 30px 30px 0;
+    }
+
+    & a {
+      padding: 8px;
+      text-align: right;
+      font-size: 1.5rem;
+      font-weight: 100;
+      transition: all 0.35s ease-out;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #fff;
+      }
+    }
+  }
+}
+
+#content {
+  width: 90%;
+  margin: 0 auto;
+
+  & section {
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    padding: 100px;
+    margin-bottom: 100px;
+    font-family: var(--contentFont);
+
+    & .content_wrap {
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 10px;
+      row-gap: 30px;
+      grid-template-areas:
+        "title title title title"
+        "jacket jacket txt txt"
+        "jacket jacket txt txt"
+        "jacket jacket list music";
+
+      /* & > * {
+        border: 1px solid #fff;
+        box-sizing: border-box;
+      } */
+
+      & h3 {
+        grid-area: title;
+        font-family: var(--titleFont);
+        font-size: 5vw;
+        text-align: center;
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+      }
+
+      & .jacket_wrap {
+        grid-area: jacket;
+        position: relative;
+        filter: drop-shadow(4px 4px 0.75rem #3e3e3e);
+
+        &::before {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: #aaa;
+          box-shadow: inset 2px 2px 10px 0 rgba(0, 0, 0, 0.6);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+        }
+        section:nth-of-type(1) &::before {
+          border: 5px solid var(--album1);
+        }
+        section:nth-of-type(2) &::before {
+          border: 5px solid var(--album2);
+        }
+        section:nth-of-type(3) &::before {
+          border: 5px solid var(--album3);
+        }
+
+        & img {
+          position: relative;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          border: 5px solid #fff;
+        }
+
+        &.playOn img {
+          animation: musicOn 5s linear infinite;
+        }
+      }
+
+      & .song_list {
+        grid-area: list;
+        height: 180px;
+        padding: 8px 0;
+        counter-reset: songList;
+
+        & li {
+          & a {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            color: #fff;
+            font-weight: 300;
+
+            &::before {
+              counter-increment: songList;
+              content: counter(songList);
+              display: inline-block;
+              margin-right: 16px;
+            }
+
+            &.playing {
+              font-weight: 700;
+            }
+
+            & span {
+              display: inline-block;
+              margin-left: 8px;
+              color: #fff;
+              font-size: 0.65rem;
+              padding: 2px 4px;
+              border-radius: 3px;
+
+              &.spanTitle {
+                background: var(--sub);
+              }
+              &.spanHit {
+                background: var(--main);
+              }
+            }
+          }
+        }
+      }
+
+      & .txt_wrap {
+        grid-area: txt;
+        color: #fff;
+        font-size: 1.2vw;
+        line-height: 1.5;
+        font-weight: 200;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+          "release genre genre ."
+          "desc desc desc desc";
+        row-gap: 16px;
+
+        & .release {
+          grid-area: release;
+          font-weight: 400;
+        }
+        & .genre {
+          grid-area: genre;
+        }
+        & .desc {
+          grid-area: desc;
+        }
+      }
+
+      & .music_wrap {
+        grid-area: music;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .btn_wrap {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+          & a {
+            width: 60px;
+            font-size: 1.5rem;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+#footerArea {
+  &::before {
+    display: none;
+  }
+}
+
+@keyframes menuAni {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes musicOn {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* 일반 pc */
+@media screen and (max-width: 1280px) {
+  #menu {
+    & li {
+      & a {
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  #content {
+    & section {
+      & .content_wrap {
+        & .jacket_wrap {
+          & img {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 태블릿 */
+@media screen and (max-width: 1024px) {
+  #menu {
+    & li {
+      & a {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  #content {
+    & section {
+      & .content_wrap {
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+          "title title "
+          "jacket jacket"
+          "txt txt"
+          "list music";
+
+        & .jacket_wrap {
+          &::before {
+            width: 40px;
+            height: 40px;
+          }
+          & img {
+            width: 50%;
+          }
+        }
+
+        & .txt_wrap {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-areas:
+            ". release ."
+            ". genre ."
+            "desc desc desc";
+          row-gap: 10px;
+          text-align: center;
+          font-size: 0.85rem;
+
+          & .desc {
+            font-size: 1rem;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 소형 태블릿 */
+@media screen and (max-width: 768px) {
+  #content {
+    & section {
+      padding: 50px;
+
+      & .content_wrap {
+        width: 100%;
+
+        grid-template-areas:
+          "title title"
+          "jacket list"
+          "music music"
+          "txt txt";
+
+        & h3 {
+          font-size: 6vw;
+        }
+        & .jacket_wrap {
+          &::before {
+            width: 30px;
+            height: 30px;
+          }
+          section:nth-of-type(1) &::before {
+            border: 3px solid var(--album1);
+          }
+          section:nth-of-type(2) &::before {
+            border: 3px solid var(--album2);
+          }
+          section:nth-of-type(3) &::before {
+            border: 3px solid var(--album3);
+          }
+          & img {
+            width: 80%;
+            border: 3px solid #fff;
+          }
+        }
+
+        & .song_list {
+          height: auto;
+
+          & li {
+            & a {
+              font-size: 0.9rem;
+            }
+          }
+        }
+
+        & .music_wrap {
+          & .visualizer-container {
+            display: none;
+          }
+
+          & .btn_wrap {
+            & a {
+              font-size: 3vw;
+            }
+          }
+        }
+
+        & .txt_wrap {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-areas:
+            "release . genre"
+            "desc desc desc";
+
+          & .release {
+            text-align: left;
+          }
+          & .genre {
+            text-align: right;
+          }
+          & .desc {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width: 640px) {
+  #content {
+    & section {
+      padding: 50px 30px;
+
+      & .content_wrap {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "title"
+          "gap"
+          "jacket"
+          "txt"
+          "list"
+          "music";
+        row-gap: 20px;
+
+        & h3 {
+          font-size: 7vw;
+        }
+
+        & .jacket_wrap {
+          &::before {
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        & .song_list {
+          margin-bottom: 15px;
+
+          & li {
+            & a {
+              justify-content: center;
+              font-size: 1rem;
+              padding: 6px;
+            }
+          }
+        }
+        & .txt_wrap {
+          grid-template-areas: "release . genre";
+          & .desc {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 최소 사이즈 */
+@media screen and (max-width: 480px) {
+  #content {
+    width: 95%;
+
+    & section {
+      padding: 50px 20px;
+
+      & .content_wrap {
+        & h3 {
+          color: #fff;
+          -webkit-text-stroke: 0;
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
+        }
+        & .jacket_wrap {
+          &::before {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        & .music_wrap {
+          & .btn_wrap {
+            & a {
+              font-size: 5vw;
+            }
+          }
+        }
+
+        & .txt_wrap {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-areas: "release genre";
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>기술혁신-수상실적</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../common/css/common.css" >
+    <link rel="stylesheet" href="./common/css/sub3common.css" >
+    <link rel="stylesheet" href="./css/sub3_content3.css" >
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" >
+    <script
+      src="https://kit.fontawesome.com/5c48cfd0d4.js"
+      crossorigin="anonymous"></script>
+    <script src="../common/js/prefixfree.min.js"></script>
+  </head>
+  <body>
+    <? include '../common/sub_header.html' ?>
+
+    <!-- .visual -->
+    <div class="visual">
+      <span>기술혁신</span>
+    </div>
+
+    <!-- .sub_nav -->
+    <div class="sub_nav">
+      <ul>
+        <li><a href="./sub3_1.html">토목건축연구소</a></li>
+        <li><a href="./sub3_2.html">환경연구소</a></li>
+        <li><a href="./sub3_3.html" class="current">수상실적</a></li>
+      </ul>
+    </div>
+
+    <!-- article -->
+    <article id="content">
+
+      <!-- .title_area -->
+      <div class="title_area">
+        <div class="line_map">
+          <span class="home">Home</span> &gt; 기술혁신 &gt; <strong>수상실적</strong>
+        </div>
+        <h2>수상실적</h2>
+        <p>Think of the people and nature</p>
+      </div>
+
+      <div class="content_area">
+        <!-- .award -->
+        <section class="award">
+          <div class="award__container">
+            <h3>Award</h3>
+            <p>창립 <strong>1967년</strong>부터 현재까지 <strong>158 개의 수상내역</strong>이 있습니다.</p>
+
+            <div class="search">
+              <label for="award" class="hidden">수상 내역 검색</label>
+              <input type="text" id="award" name="award" value autocomplete="off" placeholder="제목, 기관, 날짜 등의 검색어를 입력해주세요.">
+              <button id="searchBtn" type="button"><i class="fa-solid fa-magnifying-glass"></i><span class="hidden">검색 버튼</span></button>
+            </div>
+
+            <div class="award__contents"></div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <? include '../common/sub_footer.html' ?>
+    <script src="./js/awardSub.js"></script>
+  </body>
+</html>

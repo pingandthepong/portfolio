@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사업분야-실적</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="./common/css/sub2common.css">
+    <link rel="stylesheet" href="./css/sub2_content5.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script
+      src="https://kit.fontawesome.com/5c48cfd0d4.js"
+      crossorigin="anonymous"></script>
+    <script src="../common/js/prefixfree.min.js"></script>
+  </head>
+  <body>
+      <? include '../common/sub_header.html' ?>
+
+      <!-- .visual -->
+      <div class="visual">
+        <span>사업분야</span>
+      </div>
+
+      <!-- .sub_nav -->
+      <div class="sub_nav">
+        <ul>
+          <li><a href="./sub2_1.html">건축사업</a></li>
+          <li><a href="./sub2_2.html">토목사업</a></li>
+          <li><a href="./sub2_3.html">주택사업</a></li>
+          <li><a href="./sub2_4.html">플랜트/환경사업</a></li>
+          <li><a href="./sub2_5.html" class="current">실적</a></li>
+        </ul>
+      </div>
+
+      <!-- article -->
+      <article id="content">
+
+        <!-- .title_area -->
+        <div class="title_area">
+          <div class="line_map">
+            <span class="home">Home</span> &gt; 사업분야 &gt; <strong>실적</strong>
+          </div>
+          <h2>실적</h2>
+          <p>Think of the people and nature</p>
+        </div>
+
+        <!-- .content_area -->
+        <div class="content_area">
+          <!-- section.intro -->
+          <section class="intro">
+            <div class="intro__title">
+              <h3>Performance</h3>
+              <p class="slogan">
+                <strong>건축, 토목, 주택, 플랜트</strong> 전 분야에 걸쳐 우수한 기술력을 바탕으로<br> 보다 <strong>쾌적한 생활환경</strong>을 이룩하겠습니다.
+              </p>
+            </div>
+          </section>
+          <section class="performance_content landmark">
+            <div class="performance__container">
+              <h3>LANDMARK</h3>
+              <ul>
+                <li>
+                  <a href="javascript:void(0)">
+                    <div class="img_badge">
+                      <span class="badge">LANDMARK</span>
+                    </div>
+                    <p class="name">NAME</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <div class="img_badge">
+                      <span class="badge">LANDMARK</span>
+                    </div>
+                    <p class="name">NAME</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <div class="img_badge">
+                      <span class="badge">LANDMARK</span>
+                    </div>
+                    <p class="name">NAME</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="performance_content all">
+            <!-- 검색 -->
+            <div class="search">
+                <div class="keyword_search">
+                  <label for="performance" class="hidden">실적 검색</label>
+                  <input type="text" id="performance" name="keyword" value placeholder="제목, 태그(화력/국내/해외) 등의 검색어를 입력해주세요.">
+                </div>
+                <button type="button" id="searchBtn">검색</button>
+            </div>
+            <div class="suggestion">
+              <a href="#"><span class="state01">공항</span></a>
+              <a href="#"><span class="state02">해외</span></a>
+              <a href="#"><span class="state01">건축</span></a>
+              <a href="#"><span class="state02">항만</span></a>
+              <a href="#"><span class="state01">어울림</span></a>
+              <a href="#"><span class="state02">공공</span></a>
+            </div>
+            
+
+            <!-- 콘텐츠 -->
+            <div class="performance__container">
+              <h3>전체</h3>
+              <div class="performance_list"></div>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <? include '../common/sub_footer.html' ?>
+      <script src="./js/accordion.js"></script>
+      <script src="./js/performance.js"></script>
+  </body>
+</html>

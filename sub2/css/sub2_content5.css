@@ -1,0 +1,198 @@
+/* .intro */
+#content .content_area :is(.intro, section) {
+  width: 1400px;
+  aspect-ratio: unset;
+  margin: 0 auto;
+  display: block;
+  position: static;
+}
+#content .content_area .intro .intro__title {
+  width: auto;
+  margin: 0 0 120px 0;
+  color: #333;
+  text-shadow: none;
+  padding-left: 0;
+  text-align: center;
+}
+#content .content_area .intro__title_container:hover .intro__title {
+  animation: none;
+}
+#content .content_area .intro__title h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+#content .content_area .intro__title .slogan {
+  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 1.5;
+}
+#content .content_area .slogan strong {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+/* section.performance_content */
+#content .content_area .performance_content {
+  width: 100%;
+  padding: 100px 0;
+}
+#content .content_area .performance__container {
+  width: 1400px;
+  margin: 0 auto;
+}
+#content .content_area .performance_content h3 {
+  font-size: 2.06rem;
+  margin-bottom: 50px;
+}
+#content .content_area .performance_content ul {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+/* .landmark */
+#content .content_area .performance_content.landmark {
+  padding: 50px 0 100px;
+}
+#content .content_area .landmark ul {
+  justify-content: center;
+  gap: 20px;
+}
+#content .content_area .landmark li {
+  /* width: (1400px - 40) / 6 = 226.666px */
+  width: calc((100% - 40px) / 6);
+  height: 536px;
+  overflow: hidden;
+  background: #000;
+  border-radius: 20px;
+  position: relative;
+}
+#content .content_area .landmark li :is(a, .img_badge) {
+  width: 100%;
+  height: 100%;
+}
+#content .content_area .landmark li .img_badge {
+  background: #000 url("../../common/images/header-logo-pb20.png") no-repeat
+    center;
+}
+#content .content_area .performance_content li .badge {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px 10px;
+  background: #2c44f2;
+  color: #fff;
+  border-radius: 6px;
+  z-index: 1;
+  display: none;
+}
+#content .content_area .landmark li .name {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  display: none;
+}
+/* .all */
+/* .search */
+#content .content_area .search {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#content .content_area .search .keyword_search {
+  flex: 1;
+}
+#content .content_area .search input#performance {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #d2d2d2;
+  border-radius: 12px;
+  padding: 15px 22px;
+  box-sizing: border-box;
+  font-size: 1.13rem;
+  font-weight: 300;
+}
+#content .content_area .search input#performance:focus {
+  outline: none;
+  border: 1px solid #f65742;
+}
+#content .content_area #searchBtn {
+  width: 90px;
+  height: 50px;
+  color: #fff;
+  font-size: 1.13rem;
+  border-radius: 12px;
+  border: none;
+  background: #f65742;
+  cursor: pointer;
+}
+#content .content_area #searchBtn:focus {
+  outline: 2px solid #000;
+}
+#content .content_area .all {
+  background: #f8f8f8;
+  background: url("../images/content5/bg.svg") no-repeat;
+  background-size: cover;
+  padding-bottom: 200px;
+}
+#content .content_area .all .suggestion {
+  margin: 30px 0 120px;
+  text-align: center;
+}
+#content .content_area .all .suggestion a {
+  display: inline-block;
+}
+#content .content_area .all ul {
+  flex-wrap: wrap;
+  gap: 100px 20px;
+}
+#content .content_area .all li {
+  width: calc((100% - 40px) / 3);
+}
+#content .content_area .all li .all_img_container {
+  width: 100%;
+  height: 262px;
+  border-radius: 20px;
+  background: #000 url("../../common/images/header-logo-pb20.png") no-repeat
+    center;
+  position: relative;
+}
+#content .content_area .all .badge_list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+
+#content .content_area .all :is(.suggestion, .badge_list) span[class*="state"] {
+  background: #fff;
+  border: 1px solid #e9e9e9;
+  color: #f65742;
+  padding: 5px 16px;
+  border-radius: 8px;
+}
+#content .content_area .all :is(.suggestion, .badge_list) span.state01 {
+  background: #ffe6e3;
+}
+#content .content_area .all li .name {
+  margin-top: 16px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+#content .content_area .performance_list > p {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 80px;
+}

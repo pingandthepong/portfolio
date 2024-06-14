@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>회사소개-오시는 길</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../common/css/common.css" >
+    <link rel="stylesheet" href="./common/css/sub1common.css" >
+    <link rel="stylesheet" href="./css/sub1_content5.css" >
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" >
+    <script
+      src="https://kit.fontawesome.com/5c48cfd0d4.js"
+      crossorigin="anonymous"></script>
+    <script src="./common/js/prefixfree.min.js"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fd6742a7f9629830a40015da1982901b"></script>
+    <script src="./js/map.js"></script>
+  </head>
+  <body>
+      <? include '../common/sub_header.html' ?>
+
+      <!-- .visual -->
+      <div class="visual">
+        <span>회사소개</span>
+      </div>
+
+      <!-- .sub_nav -->
+      <div class="sub_nav">
+        <ul>
+          <li><a href="./sub1_1.html">VISION</a></li>
+          <li><a href="./sub1_2.html">연혁</a></li>
+          <li><a href="./sub1_3.html">투자정보</a></li>
+          <li><a href="./sub1_4.html">협업시스템 다울</a></li>
+          <li><a href="./sub1_5.html" class="current">오시는 길</a></li>
+        </ul>
+      </div>
+
+      <!-- article -->
+      <article id="content">
+        <!-- .title_area -->
+        <div class="title_area">
+          <div class="line_map">
+            <span class="home">Home</span> &gt; 회사소개 &gt; <strong>오시는 길</strong>
+          </div>
+          <h2>오시는 길</h2>
+          <p>Think of the people and nature</p>
+        </div>
+
+        <div class="content_area">
+          <section class="contact">
+            <h3 class="hidden">지도</h3>
+            <div class="map_api">
+                <div id="map"></div>
+            </div>
+          </section>
+          <section class="contact_us">
+            <h3>Contact Us<span class="hidden"> - 연락처 및 교통편</span> </h3>
+            <p>서울특별시 종로구 우정국로26 센트로폴리스 A동, 금호건설</p>
+
+            <dl class="phone">
+              <dt class="contactus_title">전화번호</dt>
+              <dd><span class="title">대표전화</span>(02)6303-0102</dd>
+              <dd><span class="title">건축A/S</span>(02)6303-0342 (해피콜센터 080-000-0082)</dd>
+              <dd><span class="title">토목A/S</span>(02)6303-0904</dd>
+              <dd><span class="title">분양</span>(02)6303-0645<span class="title">기타문의</span>(02)6303-0102</dd>
+              <dd class="caution">주말에는 대표전화가 운영되지 않습니다. A/S접수나 분양 문의는 아래 링크를 통해 문의하시기 바랍니다.<a href="https://www.khapt.co.kr/oullim/main" target="_blank" >A/S접수 및 분양 문의</a></dd>
+            </dl>
+            <div class="public">
+              <table>
+                <caption class="contactus_title">대중교통</caption>
+                <tr>
+                  <th scope="row">지하철</th>
+                  <td colspan="2" class="subway_1">1호선 종각역 3-1번출구 방면</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">일반버스</th>
+                  <th scope="row" class="blue_bus">간선버스</th>
+                  <td>151, 162, 172, 401, 406, 704, 101, 103, 143, 150, 160, 201, 260, 262, 270, 271, 273, 370, 470, 501, 720, 721, 741, N15, N26, N37, N62</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="green_bus">지선버스</th>
+                  <td>7022</td>
+                </tr>
+              </table>
+            </div>
+            <a href="javascript:void(0)" class="print">오시는 길 인쇄하기</a>
+          </section>
+        </div>
+      </article>
+
+      <? include '../common/sub_footer.html' ?>
+  </body>
+</html>
